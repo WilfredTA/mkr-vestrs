@@ -8,7 +8,7 @@ use anyhow::{anyhow, Result, format_err};
 use std::sync::Arc;
 
 #[derive(Debug, StructOpt)]
-#[structopt(about = "Check on or claim your vest contract")]
+#[structopt(about = "Utilities for working with dss-vest contracts and the MKR token")]
 pub enum Subcommands {
     Claim(ClaimOpts),
     Check(CheckOpts),

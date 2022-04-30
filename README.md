@@ -13,10 +13,8 @@ cargo install --path ./mkr-vestrs
 # Usage
 
 ```bash
-mkr-vest help
-
 mkr-vestrs 0.1.0
-Check on or claim your vest contract
+Utilities for working with dss-vest contracts and the MKR token
 
 USAGE:
     mkr-vest <SUBCOMMAND>
@@ -26,7 +24,9 @@ FLAGS:
     -V, --version    Prints version information
 
 SUBCOMMANDS:
-    check    Claim your vesting award
+    check    Check on award contracts
     claim    Claim your vesting award
     help     Prints this message or the help of the given subcommand(s)
+    mkr      Interact with MKR token
+
 ```
