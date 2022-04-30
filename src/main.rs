@@ -13,6 +13,9 @@ async fn main() {
 
         },
         Subcommands::Check(check_opts) => {
+
+        },
+        Subcommands::Mkr(mkr_cmd) => {
             
         },
     }

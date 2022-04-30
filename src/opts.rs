@@ -11,7 +11,8 @@ use std::sync::Arc;
 #[structopt(about = "Check on or claim your vest contract")]
 pub enum Subcommands {
     Claim(ClaimOpts),
-    Check(CheckOpts)
+    Check(CheckOpts),
+    Mkr(MkrCmd),
 }
 
 #[derive(Debug, StructOpt)]
@@ -20,6 +21,7 @@ pub struct Opts {
     pub subcmd: Subcommands
 }
 #[derive(Debug, StructOpt)]
+#[structopt(about = "Claim your vesting award")]
 pub struct ClaimOpts {
     #[structopt(flatten)]
     pub inner: InnerOpts,
@@ -30,6 +32,7 @@ pub struct ClaimOpts {
 }
 
 #[derive(Debug, StructOpt)]
+#[structopt(about = "Check on award contracts")]
 pub struct CheckOpts {
     #[structopt(flatten)]
     pub inner: InnerOpts,
@@ -38,8 +41,28 @@ pub struct CheckOpts {
     #[structopt(help = "Check for award owned by address `usr`")]
     pub usr: Option<Address>,
 }
+
 #[derive(Debug, StructOpt)]
-#[structopt(about = "Claim your vesting award")]
+#[structopt(about = "Interact with MKR token")]
+pub enum MkrCmd {
+    Transfer(MkrTransferOpts),
+    Balance(InnerOpts)
+}
+
+
+#[derive(Debug, StructOpt)]
+pub struct MkrTransferOpts {
+    #[structopt(flatten)]
+    pub inner: InnerOpts,
+    #[structopt(help = "Destination address for transfer")]
+    pub dest: Address,
+    #[structopt(help = "Amount of MKR to transfer")]
+    pub amt: U256
+}
+
+
+
+#[derive(Debug, StructOpt)]
 pub struct InnerOpts {
     #[structopt(flatten)]
     pub eth: EthInfoOpts,
