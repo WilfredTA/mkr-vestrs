@@ -10,5 +10,5 @@ ethers = {version = "0.6.2", default-features = true}
 serde_json = "1.0.80"
 
 [build-dependencies]
-ethers = {version = "0.6.2", features = ["abigen"]}
+ethers = {version = "0.6.2", features = ["abigen", "solc-full"]}
 serde_json = "1.0.80"

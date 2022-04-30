@@ -1,3 +1,6 @@
 [submodule "dss-vest-rs/deps/dss-vest"]
 	path = dss-vest-rs/deps/dss-vest
 	url = https://github.com/makerdao/dss-vest
+[submodule "dss-vest-rs/deps/ds-token"]
+	path = dss-vest-rs/deps/ds-token
+	url = https://github.com/dapphub/ds-token
