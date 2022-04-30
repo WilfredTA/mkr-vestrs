@@ -17,6 +17,6 @@ tokio = {version = "1.18.0", features = ["macros"]}
 members = ["dss-vest-rs"]
 
 [[bin]]
-name = "mkr-vestrs"
+name = "mkr-vest"
 path = "src/main.rs"
 
