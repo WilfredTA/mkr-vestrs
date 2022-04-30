@@ -1,0 +1,3 @@
+[submodule "dss-vest-rs/deps/dss-vest"]
+	path = dss-vest-rs/deps/dss-vest
+	url = https://github.com/makerdao/dss-vest
