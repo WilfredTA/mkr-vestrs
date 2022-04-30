@@ -1,5 +1,5 @@
 # Mkr Vest CLI
-Simply cli to check on the status of dss-vest awards and to claim your awards.
+Simple CLI to interact with MKR and dss-vest.
 
 Motivation for building this is simple: I want to interact with MKR token easily, but then [this issue arose in MetaMask](https://github.com/MetaMask/metamask-extension/issues/14187). 
 
